@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<credit>
+    <creditOffer>
+        <amount>5</amount>
+        <durationInDays>4</durationInDays>
+        <name>Super credit</name>
+        <percent>23.0</percent>
+        <status>ACTIVE</status>
+    </creditOffer>
+    <customer>
+        <address>NY</address>
+        <email>Tom@mail.com</email>
+        <name>Tom</name>
+    </customer>
+    <status>IN_PROGRESS</status>
+    <debt>12</debt>
+</credit>
