@@ -33,7 +33,7 @@ public class Credit {
 
     private LocalDateTime decisionDate;
 
-    private CreditStatus status;
+    private CreditStatus creditStatus;
 
     private Long debt;
 

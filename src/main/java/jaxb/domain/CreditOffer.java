@@ -24,5 +24,5 @@ public class CreditOffer {
 
     private String name;
 
-    private CreditOfferStatus status;
+    private CreditOfferStatus creditOfferStatus;
 }

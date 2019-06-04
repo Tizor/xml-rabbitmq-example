@@ -26,14 +26,14 @@ public class jaxbReader {
         Unmarshaller unmarshaller = context.createUnmarshaller();
         Credit credit = (Credit) unmarshaller.unmarshal(file);
 
-        System.out.println(credit.getStatus());
+//        System.out.println(credit.getStatus());
         System.out.println("Change_status");
         jaxbReader.setStatus(credit);
 
         Marshaller marshaller = context.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         marshaller.marshal(credit, file);
-        System.out.println(credit.getStatus());
+//        System.out.println(credit.getStatus());
 
     }
 
@@ -42,7 +42,7 @@ public class jaxbReader {
        status.add(CreditStatus.APROVED);
        status.add(CreditStatus.DECLINED);
         int randomIndex = (int) (Math.random() * status.size());
-        credit.setStatus(status.get(randomIndex));
+//        credit.setStatus(status.get(randomIndex));
         return credit;
     }
 
