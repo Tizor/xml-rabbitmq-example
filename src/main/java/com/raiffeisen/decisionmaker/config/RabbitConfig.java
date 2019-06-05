@@ -1,18 +1,14 @@
 package com.raiffeisen.decisionmaker.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.FanoutExchange;
-import org.springframework.amqp.support.converter.Jackson2XmlMessageConverter;
-import org.springframework.amqp.support.converter.MessageConverter;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.amqp.support.converter.Jackson2XmlMessageConverter;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * User: Petr Konovalchuk
@@ -50,10 +46,15 @@ public class RabbitConfig {
         return rabbitTemplate;
     }
 
-    //объявляем очередь с именем queue1
+    //объявляем очереди
     @Bean
-    public Queue myQueue1() {
-        return new Queue("query1");
+    public Queue fromService1toService2() {
+        return new Queue("from service 1 to service 2");
+    }
+
+    @Bean
+    public Queue fromService2toService1() {
+        return new Queue("from service 2 to service 1");
     }
 
 }
